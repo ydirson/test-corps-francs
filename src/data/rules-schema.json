@@ -46,6 +46,13 @@
                     "type": "string",
                     "minLength": 1
                 },
+                "attaches-to": {
+                    "type": "array",
+                    "description": "a list of equipment ids this equipment attaches to (default: any unit)",
+                    "items": {
+                        "$ref": "#/$defs/id"
+                    }
+                },
                 "cost": {
                     "type": "number"
                 },
