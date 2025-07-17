@@ -1,5 +1,6 @@
 {
-    "faction": "WWI",
+    "faction": "20th century",
+    "notes": "FIXME: vehicles and cavalry not described",
     "units" : [
         {
             "id": "osned1v5",
@@ -118,7 +119,7 @@
             "id": "371fsbh7",
             "name": "Manchon lance-grenade",
             "attaches-to": ["a6u0b284"],
-            "notes": "Retirer ou monter un manchon lance-grenade sur un fusil coûte une action.",
+            "notes": "Retirer ou monter un manchon lance-grenade sur un fusil coûte une action. FIXME should the ammo be a separate equipment?",
             "cost": 5,
             "weapon": {
                 "attacks": 1,
@@ -153,14 +154,11 @@
         },
         {
             "id": "xunxa8kd",
-            "name": "Heavy mounted",
-            "notes": "Lance-grenade, mortier, ... FIXME coût spécifique scénario ?",
+            "name": "Mortier",
+            "notes": "FIXME coût spécifique scénario ?",
             "cost": 99,
             "weapon": {
                 "attacks": 1,
-                "reload": {
-                    "capacity": 1
-                },
                 "tags": ["heavy", "mounted", "one-shot-per-activation"],
                 "ranges": [16, 32]
             }
@@ -177,9 +175,6 @@
             "cost": 10,
             "weapon": {
                 "attacks": 4,
-                "reload": {
-                    "capacity": 1
-                },
                 "tags": ["heavy", "mounted"],
                 "ranges": [1, 16, 32, 48]
             }

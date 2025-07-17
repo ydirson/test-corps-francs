@@ -130,6 +130,9 @@
         "faction": {
             "type": "string"
         },
+        "notes": {
+            "type": "string"
+        },
         "units": {
             "type": "array",
             "uniqueItems": true,
