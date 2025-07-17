@@ -1,6 +1,6 @@
 {
     "faction": "20th century",
-    "notes": "FIXME: vehicles and cavalry not described",
+    "notes": "FIXME: vehicles not described",
     "units" : [
         {
             "id": "osned1v5",
@@ -85,6 +85,11 @@
                 "attacks": 1,
                 "ranges": [1, 10, 20, 30]
             }
+        },
+        {
+            "id": "fw5eb3cz",
+            "name": "Cheval",
+            "cost": 5
         },
         {
             "id": "jbz7hvzq",
