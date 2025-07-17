@@ -1,0 +1,129 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Corps Francs",
+    "description": "Unit and Equipments types to assemble a combat group",
+    "type": "object",
+    "required": ["units", "equipments"],
+    "additionalProperties": false,
+    "properties": {
+        "faction": {
+            "type": "string"
+        },
+        "units": {
+            "type": "array",
+            "uniqueItems": true,
+            "additionalProperties": false,
+            "items": {
+                "required": ["id", "name", "movement", "courage", "cost"],
+                "additionalProperties": false,
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "minLength": 8,
+                        "maxLength": 8
+                    },
+                    "name": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "movement": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "courage": {
+                        "type": "integer"
+                    },
+                    "cost": {
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "equipments": {
+            "type": "array",
+            "uniqueItems": true,
+            "additionalProperties": false,
+            "items": {
+                "required": ["id", "name", "cost"],
+                "additionalProperties": false,
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "minLength": 8,
+                        "maxLength": 8
+                    },
+                    "name": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "cost": {
+                        "type": "number"
+                    },
+                    "count": {
+                        "type": "integer",
+                        "description": "number of consumable items"
+                    },
+                    "notes": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "weapon": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "attacks": {
+                                "type": "integer",
+                                "minimum": 1,
+                                "description": "number of attacks"
+                            },
+                            "tags": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "items": {
+                                    "type": "string",
+                                    "description": "special weapon behaviour",
+                                    "enum": ["angle", "heavy", "mounted",
+                                             "one-shot-per-activation"]
+                                }
+                            },
+                            "ranges": {
+                                "type": "array",
+                                "description": "for ranged weapons, list of integer: (min, +0, +1, +2)",
+                                "items": {
+                                    "required": [],
+                                    "additionalProperties": false,
+                                    "properties": {}
+                                }
+                            },
+                            "reload": {
+                                "type": "object",
+                                "description": "details if weapon needs reloading",
+                                "required": ["capacity"],
+                                "additionalProperties": false,
+                                "properties": {
+                                    "capacity": {
+                                        "type": "integer",
+                                        "minimum": 1,
+                                        "description": "nb of shots before reloading"
+                                    },
+                                    "ammo": {
+                                        "type": "integer",
+                                        "minimum": 0,
+                                        "description": "number of ammunitions available"
+                                    }
+                                }
+                            }
+                        },
+                        "required": [
+                            "attacks"
+                        ]
+                    },
+                    "effects": {
+                        "type": "object",
+                        "$comment": "FIXME free structure for now"
+                    }
+                }
+            }
+        }
+    }
+}
