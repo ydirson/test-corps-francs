@@ -1,41 +1,41 @@
 {
     "faction": "20th century",
-    "notes": "FIXME: vehicles not described",
+    // FIXME: vehicles not described
     "units" : [
         {
             "id": "osned1v5",
             "name": "Civil",
             "movement": 6,
             "courage": 7,
-            "cost": 2
+            "cost": 2,
         },
         {
             "id": "ghkz4mus",
             "name": "Recrue",
             "movement": 6,
             "courage": 6,
-            "cost": 6
+            "cost": 6,
         },
         {
             "id": "0vv7ljao",
             "name": "Entraîné",
             "movement": 6,
             "courage": 5,
-            "cost": 10
+            "cost": 10,
         },
         {
             "id": "4dwab3m0",
             "name": "Vétéran",
             "movement": 6,
             "courage": 4,
-            "cost": 14
+            "cost": 14,
         },
         {
             "id": "hsud3jnw",
             "name": "Élite",
             "movement": 6,
             "courage": 3,
-            "cost": 18
+            "cost": 18,
         }
     ],
 
@@ -124,9 +124,10 @@
             "id": "371fsbh7",
             "name": "Manchon lance-grenade",
             "attaches-to": ["a6u0b284"],
-            "notes": "Retirer ou monter un manchon lance-grenade sur un fusil coûte une action. FIXME should the ammo be a separate equipment?",
+            "notes": "Retirer ou monter un manchon lance-grenade sur un fusil coûte une action.",
             "cost": 5,
             "weapon": {
+                // FIXME should the ammo be a separate equipment?"
                 "attacks": 1,
                 "reload": {
                     "capacity": 1,
@@ -160,7 +161,7 @@
         {
             "id": "xunxa8kd",
             "name": "Mortier",
-            "notes": "FIXME coût spécifique scénario ?",
+            // FIXME coût spécifique scénario ?
             "cost": 99,
             "weapon": {
                 "attacks": 1,
@@ -172,7 +173,7 @@
             "id": "pk2a2bds",
             "name": "Lance de cavalerie",
             "cost": 1,
-            "notes": "FIXME"
+            // FIXME
         },
         {
             "id": "fmdjsmfy",
