@@ -1,0 +1,188 @@
+faction = "20th century"
+# FIXME: vehicles not described
+
+[[units]]
+id = "osned1v5"
+name = "Civil"
+movement = 6
+courage = 7
+cost = 2
+
+[[units]]
+id = "ghkz4mus"
+name = "Recrue"
+movement = 6
+courage = 6
+cost = 6
+
+[[units]]
+id = "0vv7ljao"
+name = "Entraîné"
+movement = 6
+courage = 5
+cost = 10
+
+[[units]]
+id = "4dwab3m0"
+name = "Vétéran"
+movement = 6
+courage = 4
+cost = 14
+
+[[units]]
+id = "hsud3jnw"
+name = "Élite"
+movement = 6
+courage = 3
+cost = 18
+
+[[equipments]]
+id = "i5d46e87"
+name = "Arme de corps à corps"
+notes = "Couteau, pelle, sabre, ..."
+cost = 1
+
+[equipments.weapon]
+attacks = 1
+
+[[equipments]]
+id = "g0i1o0zr"
+name = "Arme de poing"
+notes = "Pistolet, revolver, ..."
+cost = 1
+
+[equipments.weapon]
+attacks = 2
+ranges = [1, 5, 10]
+
+[equipments.effects.bonus]
+"[id=i5d46e87].weapon.attacks" = 1
+
+[[equipments]]
+id = "8ynj5zsw"
+name = "Armure de tranchée"
+cost = 2
+
+[equipments.effects]
+movement = -1
+grenade = -1
+
+[equipments.effects.defense]
+CC = 2
+direct-shot = 1
+
+[[equipments]]
+id = "0beyher0"
+name = "Carabine, Mousqueton"
+cost = 1
+
+[equipments.weapon]
+attacks = 1
+ranges = [1, 10, 20, 30]
+
+[[equipments]]
+id = "fw5eb3cz"
+name = "Cheval"
+cost = 5
+
+[[equipments]]
+id = "jbz7hvzq"
+name = "Lunette"
+attaches-to = ["a6u0b284"]
+cost = 3
+
+[equipments.effects.bonus]
+".weapon.ranges" = [0, 4, 8, 12]
+
+[[equipments]]
+id = "pj4uoby9"
+name = "Baïonnette"
+attaches-to = ["a6u0b284"]
+cost = 1
+
+[equipments.weapon]
+attacks = 1
+
+[[equipments]]
+id = "a6u0b284"
+name = "Fusil de guerre"
+cost = 1
+
+[equipments.weapon]
+attacks = 1
+ranges = [1, 12, 24, 36]
+
+[[equipments]]
+id = "371fsbh7"
+name = "Manchon lance-grenade"
+attaches-to = ["a6u0b284"]
+notes = "Retirer ou monter un manchon lance-grenade sur un fusil coûte une action."
+cost = 5
+
+[equipments.weapon]
+# FIXME should the ammo be a separate equipment?"
+attacks = 1
+tags = ["angle", "one-shot-per-activation"]
+ranges = [8, 16]
+
+[equipments.weapon.reload]
+capacity = 1
+ammo = 4
+
+[[equipments]]
+id = "eyub0onq"
+name = "Fusil-mitrailleur"
+cost = 6
+
+[equipments.weapon]
+attacks = 3
+tags = ["heavy"]
+ranges = [1, 12, 24, 36]
+
+[[equipments]]
+id = "26wbw8xe"
+name = "Grenades"
+cost = 2
+count = 2
+
+[equipments.weapon]
+attacks = 1
+tags = ["angle", "one-shot-per-activation"]
+ranges = [1, 8]
+
+[[equipments]]
+id = "xunxa8kd"
+name = "Mortier"
+# FIXME coût spécifique scénario ?
+cost = 99
+
+[equipments.weapon]
+attacks = 1
+tags = ["heavy", "mounted", "one-shot-per-activation"]
+ranges = [16, 32]
+
+[[equipments]]
+id = "pk2a2bds"
+name = "Lance de cavalerie"
+cost = 1
+# FIXME
+
+[[equipments]]
+id = "fmdjsmfy"
+name = "Mitrailleuse"
+cost = 10
+
+[equipments.weapon]
+attacks = 4
+tags = ["heavy", "mounted"]
+ranges = [1, 16, 32, 48]
+
+[[equipments]]
+id = "gj1vbwow"
+name = "Pistolet-mitrailleur"
+cost = 2
+notes = "à partir de 1918"
+
+[equipments.weapon]
+attacks = 2
+ranges = [1, 5, 10, 15]
