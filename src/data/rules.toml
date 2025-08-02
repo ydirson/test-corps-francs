@@ -41,44 +41,31 @@ id = "i5d46e87"
 name = "Arme de corps à corps"
 notes = "Couteau, pelle, sabre, ..."
 cost = 1
-
-[equipments.weapon]
-attacks = 1
+weapon.attacks = 1
 
 [[equipments]]
 id = "g0i1o0zr"
 name = "Arme de poing"
 notes = "Pistolet, revolver, ..."
 cost = 1
-
-[equipments.weapon]
-attacks = 2
-ranges = [1, 5, 10]
-
-[equipments.effects.bonus]
-"[id=i5d46e87].weapon.attacks" = 1
+weapon.attacks = 2
+weapon.ranges = [1, 5, 10]
+effects.bonus = { "[id=i5d46e87].weapon.attacks" = +1 }
 
 [[equipments]]
 id = "8ynj5zsw"
 name = "Armure de tranchée"
 cost = 2
-
-[equipments.effects]
-movement = -1
-grenade = -1
-
-[equipments.effects.defense]
-CC = 2
-direct-shot = 1
+effects.movement = -1
+effects.grenade = -1
+effects.defense = { CC = 2, direct-shot = 1 }
 
 [[equipments]]
 id = "0beyher0"
 name = "Carabine, Mousqueton"
 cost = 1
-
-[equipments.weapon]
-attacks = 1
-ranges = [1, 10, 20, 30]
+weapon.attacks = 1
+weapon.ranges = [1, 10, 20, 30]
 
 [[equipments]]
 id = "fw5eb3cz"
@@ -90,27 +77,20 @@ id = "jbz7hvzq"
 name = "Lunette"
 attaches-to = ["a6u0b284"]
 cost = 3
-
-[equipments.effects.bonus]
-".weapon.ranges" = [0, 4, 8, 12]
+effects.bonus = { ".weapon.ranges" = [0, 4, 8, 12] }
 
 [[equipments]]
 id = "pj4uoby9"
 name = "Baïonnette"
 attaches-to = ["a6u0b284"]
 cost = 1
-
-[equipments.weapon]
-attacks = 1
+weapon = { attacks = 1 }
 
 [[equipments]]
 id = "a6u0b284"
 name = "Fusil de guerre"
 cost = 1
-
-[equipments.weapon]
-attacks = 1
-ranges = [1, 12, 24, 36]
+weapon = { attacks = 1, ranges = [1, 12, 24, 36] }
 
 [[equipments]]
 id = "371fsbh7"
@@ -118,48 +98,37 @@ name = "Manchon lance-grenade"
 attaches-to = ["a6u0b284"]
 notes = "Retirer ou monter un manchon lance-grenade sur un fusil coûte une action."
 cost = 5
-
-[equipments.weapon]
 # FIXME should the ammo be a separate equipment?"
-attacks = 1
-tags = ["angle", "one-shot-per-activation"]
-ranges = [8, 16]
-
-[equipments.weapon.reload]
-capacity = 1
-ammo = 4
+weapon.attacks = 1
+weapon.tags = ["angle", "one-shot-per-activation"]
+weapon.ranges = [8, 16]
+weapon.reload = { capacity = 1, ammo = 4 }
 
 [[equipments]]
 id = "eyub0onq"
 name = "Fusil-mitrailleur"
 cost = 6
-
-[equipments.weapon]
-attacks = 3
-tags = ["heavy"]
-ranges = [1, 12, 24, 36]
+weapon.attacks = 3
+weapon.tags = ["heavy"]
+weapon.ranges = [1, 12, 24, 36]
 
 [[equipments]]
 id = "26wbw8xe"
 name = "Grenades"
 cost = 2
 count = 2
-
-[equipments.weapon]
-attacks = 1
-tags = ["angle", "one-shot-per-activation"]
-ranges = [1, 8]
+weapon.attacks = 1
+weapon.tags = ["angle", "one-shot-per-activation"]
+weapon.ranges = [1, 8]
 
 [[equipments]]
 id = "xunxa8kd"
 name = "Mortier"
 # FIXME coût spécifique scénario ?
 cost = 99
-
-[equipments.weapon]
-attacks = 1
-tags = ["heavy", "mounted", "one-shot-per-activation"]
-ranges = [16, 32]
+weapon.attacks = 1
+weapon.tags = ["heavy", "mounted", "one-shot-per-activation"]
+weapon.ranges = [16, 32]
 
 [[equipments]]
 id = "pk2a2bds"
@@ -171,18 +140,14 @@ cost = 1
 id = "fmdjsmfy"
 name = "Mitrailleuse"
 cost = 10
-
-[equipments.weapon]
-attacks = 4
-tags = ["heavy", "mounted"]
-ranges = [1, 16, 32, 48]
+weapon.attacks = 4
+weapon.tags = ["heavy", "mounted"]
+weapon.ranges = [1, 16, 32, 48]
 
 [[equipments]]
 id = "gj1vbwow"
 name = "Pistolet-mitrailleur"
 cost = 2
 notes = "à partir de 1918"
-
-[equipments.weapon]
-attacks = 2
-ranges = [1, 5, 10, 15]
+weapon.attacks = 2
+weapon.ranges = [1, 5, 10, 15]
